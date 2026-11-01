@@ -1,4 +1,4 @@
-
+import CareerTips from "./components/CareerTips";
 import { useState } from "react";
 import Header from "./components/Header";
 import JobForm from "./components/JobForm";
@@ -45,6 +45,8 @@ function App() {
         <JobForm onAddJob={handleAddJob} />
 
         <JobList jobs={jobs} />
+
+        <CareerTips />
       </main>
 
       <Footer />
