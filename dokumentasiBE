@@ -1,0 +1,44 @@
+SkillBridge
+SkillBridge adalah aplikasi berbasis web untuk pengelolaan informasi lowongan pekerjaan. Proyek ini menggunakan React sebagai frontend dan NestJS sebagai backend REST API.
+
+Teknologi
+Frontend
+React
+Vite
+
+Backend
+NestJS
+TypeScript
+Prisma ORM 7.10.1
+PostgreSQL
+Node.js
+
+Fitur Backend
+Backend menyediakan fitur pengelolaan data lowongan pekerjaan (Jobs), meliputi:
+Menampilkan seluruh lowongan pekerjaan.
+Menampilkan detail lowongan berdasarkan ID.
+Menambahkan lowongan pekerjaan.
+Memperbarui data lowongan pekerjaan.
+Menghapus lowongan pekerjaan.
+Mencegah penambahan lowongan duplikat berdasarkan posisi dan perusahaan.
+Menyimpan data secara permanen menggunakan PostgreSQL.
+
+Pengujian API
+Pengujian endpoint dilakukan menggunakan Postman, mencakup:
+GET All Jobs.
+GET Job by ID.
+POST Create Job.
+PATCH Update Job.
+DELETE Job.
+POST Duplicate Job.
+GET Job Not Found
+
+Hasil implementasi yang diperoleh:
+PostgreSQL berhasil digunakan sebagai database aplikasi SkillBridge.
+Prisma ORM berhasil diintegrasikan dengan NestJS.
+Schema database berhasil dibuat dan dimigrasikan.
+Prisma Client berhasil dihasilkan dan digunakan oleh backend.
+Operasi Create, Read, Update, dan Delete berhasil dijalankan.
+Validasi data duplikat menghasilkan HTTP 409 Conflict.
+Pencarian data yang tidak tersedia menghasilkan HTTP 404 Not Found.
+Frontend berhasil menggunakan backend yang terhubung dengan database.
