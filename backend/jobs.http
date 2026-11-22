@@ -1,0 +1,63 @@
+@baseUrl = http://localhost:3000
+
+
+GET {{baseUrl}}/jobs
+
+### 2. POST
+POST {{baseUrl}}/jobs
+Content-Type: application/json
+
+{
+  "posisi": "UI/UX Designer",
+  "perusahaan": "Creative Digital",
+  "lokasi": "Bandung",
+  "tipe": "Full-time",
+  "gaji": 5000000,
+  "deskripsi": "Merancang antarmuka dan pengalaman pengguna aplikasi."
+}
+
+
+### 3. PATCH
+PATCH {{baseUrl}}/jobs/3
+Content-Type: application/json
+
+{
+  "posisi": "Senior UI/UX Designer",
+  "gaji": 7000000
+}
+
+
+### 4. DELETE 
+DELETE {{baseUrl}}
+
+
+### 5. POST - Menguji validasi data
+POST {{baseUrl}}/jobs
+Content-Type: application/json
+
+{
+  "posisi": "AB",
+  "perusahaan": "A",
+  "lokasi": "B",
+  "tipe": "Freelance",
+  "gaji": -1000000,
+  "deskripsi": "Pendek"
+}
+
+
+### 6. GET - Menguji NotFoundException
+GET {{baseUrl}}/jobs/999
+
+
+### 7. POST - Menguji ConflictException
+POST {{baseUrl}}/jobs
+Content-Type: application/json
+
+{
+  "posisi": "Frontend Developer",
+  "perusahaan": "SkillBridge Tech",
+  "lokasi": "Bandung",
+  "tipe": "Full-time",
+  "gaji": 6000000,
+  "deskripsi": "Mengembangkan tampilan aplikasi web."
+}

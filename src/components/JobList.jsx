@@ -1,7 +1,6 @@
-
 import JobCard from "./JobCard";
 
-function JobList({ jobs }) {
+function JobList({ jobs, onEdit, onDelete }) {
   if (jobs.length === 0) {
     return (
       <div className="empty-state">
@@ -20,7 +19,12 @@ function JobList({ jobs }) {
 
       <div className="job-grid">
         {jobs.map((job) => (
-          <JobCard key={job.id} job={job} />
+          <JobCard
+            key={job.id}
+            job={job}
+            onEdit={onEdit}
+            onDelete={onDelete}
+          />
         ))}
       </div>
     </section>
